@@ -1,0 +1,11 @@
+from flask import Flask
+
+# will run on http://localhost:5000
+app = Flask(__name__)
+
+@app.route('/test')
+def test():
+    return 'Hello World! Test API is working properly.'
+
+if __name__ == '__main__':
+    app.run(debug=True)

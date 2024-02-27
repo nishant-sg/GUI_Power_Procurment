@@ -1,0 +1,184 @@
+
+--- Job RE15.gms Start 02/17/24 16:07:01 45.7.0 64fbf3ce WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\45\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms"
+    PageSize 0
+    ScrDir "C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\225a\"
+    SysDir C:\GAMS\45\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+          https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+          C:\GAMS\45\gamslice.txt
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 8 core(s), and 12 thread(s) available
+GAMS 45.7.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting compilation
+--- RE15.gms(94) 3 Mb 1 Error
+*** Error 409 in C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- RE15.gms(96) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx Par=Gen_Data rng=Gdetails1!A1:H43 Rdim=1 Cdim=1 log=log.txt
+--- RE15.gms(97) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(99) 3 Mb 2 Errors
+*** Error 409 in C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- RE15.gms(102) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=demand1 rng=Demand_Data!A1:B97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1360 Ms
+--- RE15.gms(103) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(107) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=PV_Act rng=PV_Data!A1:B97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1359 Ms
+--- RE15.gms(108) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(112) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=Wind_Act rng=Wind_Data!A1:B97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1313 Ms
+--- RE15.gms(113) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(117) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=Hydro_Data rng=Hydro_Data!A1:Q5 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1359 Ms
+--- RE15.gms(118) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(122) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=Hydro_flow rng=Hydro_flow!A1:E97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1375 Ms
+--- RE15.gms(123) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(127) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=PX_Data rng=PX_Data!A1:E16 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1297 Ms
+--- RE15.gms(128) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(132) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=PX_Cost rng=PX_Cost!A1:B16  Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1422 Ms
+--- RE15.gms(133) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(137) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=PX_Avail rng=PX_CA!A1:CS16 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1438 Ms
+--- RE15.gms(138) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(142) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=DSM_cost rng=DSM_Data!C1:D97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1437 Ms
+--- RE15.gms(143) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(147) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=REC_Data rng=REC_Data!A1:C97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1359 Ms
+--- RE15.gms(148) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(152) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=DAM_Data rng=DAM_Data!A1:B97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1281 Ms
+--- RE15.gms(153) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(157) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=RTM_Data rng=RTM_Data!A1:B97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1485 Ms
+--- RE15.gms(158) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(162) 3 Mb
+--- call GDXXRW TN_prelim_data11.xlsx  Par=Risk_Data rng=Risk_Data!A2:P97 Rdim=1 Cdim=1
+
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 1422 Ms
+--- RE15.gms(163) 3 Mb
+--- GDXin=C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- GDX File ($gdxIn) C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+--- RE15.gms(383) 3 Mb 3 Errors
+*** Error 257 in C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms
+    Solve statement not checked because of previous errors
+--- RE15.gms(384) 3 Mb 4 Errors
+*** Error 141 in C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- RE15.gms(386) 3 Mb 5 Errors
+*** Error 141 in C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\GAMS\RE15.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- RE15.gms(401) 3 Mb 5 Errors
+*** Status: Compilation error(s)
+--- Job RE15.gms Stop 02/17/24 16:07:24 elapsed 0:00:22.970

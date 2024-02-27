@@ -1,0 +1,4 @@
+GDXXRW           45.7.0 64fbf3ce Jan 18, 2024          WEI x86 64bit/MS Window
+Input file : C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.xlsx
+Output file: C:\Users\Nishant\Downloads\SEMINAR WORK FOLDER - BALA -20240217T095056Z-001\SEMINAR WORK FOLDER - BALA\TN_prelim_data11.gdx
+Total time = 2250 Ms

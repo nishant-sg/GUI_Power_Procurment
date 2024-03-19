@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "grommet": "^2.36.0",
+    "react-datasheet": "^1.4.12",
+    "react-table": "^7.8.0",
+    "react-table-6": "^6.11.0",
+    "styled-components": "^5.3.11"
+  }
+}

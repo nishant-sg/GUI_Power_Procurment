@@ -1,0 +1,41 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    386 PARAMETER report  
+
+    Final_cost       alpha        Risk
+
+1      210.969 1.000000E-9 2.698238E+7
+2      211.009 2.500000E-9 2.693740E+7
+3      211.076 5.000000E-9 2.692541E+7
+4      211.144 7.500000E-9 2.692541E+7
+5      211.211 1.000000E-8 2.684279E+7
+6      212.692 1.500000E-8 1.479780E+7
+7      212.766 2.000000E-8 1.469311E+7
+8      212.838 2.500000E-8 1.406491E+7
+9      212.905 3.000000E-8 1.295072E+7
+10     212.968 3.500000E-8 1.199593E+7
+11     213.798 4.000000E-8 8756110.183
+12     216.508 1.100000E-7 2210326.280
+13     216.519 1.150000E-7 2118521.693
+14     216.529 1.200000E-7 2040453.685
+15     219.689 4.400000E-7  368622.847
+16     219.696 4.600000E-7  357280.031
+17     219.704 4.800000E-7  347534.719
+18     219.710 5.000000E-7  335941.444
+
+
+
+EXECUTION TIME       =        0.094 SECONDS     12 MB  24.2.3 r46072 WEX-WEI
+
+
+USER: Parul Mathuria                                 G130702/0001AP-WIN
+      Malaviya National Institute of Technology, Electrical EngiDC10418
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\RE15.gms
+Output     C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\RE15.lst

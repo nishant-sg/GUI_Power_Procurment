@@ -1,0 +1,723 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE RE15 Using MINLP From line 381
+
+
+---- Gen_cost  
+
+Gen_cost
+                (.LO, .L, .UP, .M = 0, 193.179263446668, +INF, 0)
+       -1       OF
+        1       GC
+
+
+---- LS_cost  
+
+LS_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       LSC
+
+
+---- PXX_cost  
+
+PXX_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       PXC
+
+
+---- DSM_costt  
+
+DSM_costt
+                (.LO, .L, .UP, .M = 0, 8.02159635053476, +INF, 0)
+       -1       OF
+        1       DSMC
+
+
+---- HGen_cost  
+
+HGen_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       HGC
+
+
+---- S_REC_cost  
+
+S_REC_cost
+                (.LO, .L, .UP, .M = 0, 11.2450337080929, +INF, 0)
+       -1       OF
+        1       S_RECC
+
+
+---- NS_REC_cost  
+
+NS_REC_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       NS_RECC
+
+
+---- PXXDAM_cost  
+
+PXXDAM_cost
+                (.LO, .L, .UP, .M = 0, 1.77422986239885, +INF, 0)
+       -1       OF
+        1       DAMC
+
+
+---- PXXRTM_cost  
+
+PXXRTM_cost
+                (.LO, .L, .UP, .M = 0, 2.06400405969481, +INF, 0)
+       -1       OF
+        1       RTMC
+
+
+---- PV_Ct_cost  
+
+PV_Ct_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       PVCtC
+
+
+---- Wind_Ct_cost  
+
+Wind_Ct_cost
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       OF
+        1       WindCtC
+
+
+---- G  Generator output under time period t
+
+G(APNRL,t1)
+                (.LO, .L, .UP, .M = 0, 55, +INF, 0)
+       -0.0002  GC
+        1       powerbal1(t1)
+       -1       powerlim1(APNRL,t1)
+        1       powerlim2(APNRL,t1)
+       -1       G_Rampup(APNRL,t2)
+        1       G_Rampdown(APNRL,t2)
+
+G(APNRL,t2)
+                (.LO, .L, .UP, .M = 0, 55, +INF, 0)
+       -0.0002  GC
+        1       powerbal1(t2)
+       -1       powerlim1(APNRL,t2)
+        1       powerlim2(APNRL,t2)
+        1       G_Rampup(APNRL,t2)
+       -1       G_Rampup(APNRL,t3)
+       -1       G_Rampdown(APNRL,t2)
+        1       G_Rampdown(APNRL,t3)
+
+G(APNRL,t3)
+                (.LO, .L, .UP, .M = 0, 55, +INF, 0)
+       -0.0002  GC
+        1       powerbal1(t3)
+       -1       powerlim1(APNRL,t3)
+        1       powerlim2(APNRL,t3)
+        1       G_Rampup(APNRL,t3)
+       -1       G_Rampup(APNRL,t4)
+       -1       G_Rampdown(APNRL,t3)
+        1       G_Rampdown(APNRL,t4)
+
+REMAINING 3357 ENTRIES SKIPPED
+
+---- E  Energy not served in period t (Load Shedding)
+
+E(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.005)
+       -0.005   LSC
+        1       powerbal1(t1)
+
+E(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.005)
+       -0.005   LSC
+        1       powerbal1(t2)
+
+E(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.005)
+       -0.005   LSC
+        1       powerbal1(t3)
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- PV_Sch  Scheduled PV Generation
+
+PV_Sch(t1)
+                (.LO, .L, .UP, .M = 0, 0, 0, -0.00521)
+        1       powerbal1(t1)
+       -1       TS
+        1       PV_bal(t1)
+
+PV_Sch(t2)
+                (.LO, .L, .UP, .M = 0, 0, 0, -0.00521)
+        1       powerbal1(t2)
+       -1       TS
+        1       PV_bal(t2)
+
+PV_Sch(t3)
+                (.LO, .L, .UP, .M = 0, 0, 0, -0.00521)
+        1       powerbal1(t3)
+       -1       TS
+        1       PV_bal(t3)
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- Wind_Sch  Scheduled Wind Generation
+
+Wind_Sch(t1)
+                (.LO, .L, .UP, .M = 0, 3396.94174700961, 3396.94174700961, 
+-0.005)
+        1       powerbal1(t1)
+       -1       TW
+        1       Wind_bal(t1)
+
+Wind_Sch(t2)
+                (.LO, .L, .UP, .M = 0, 3405.186035989, 3405.186035989, -0.005)
+        1       powerbal1(t2)
+       -1       TW
+        1       Wind_bal(t2)
+
+Wind_Sch(t3)
+                (.LO, .L, .UP, .M = 0, 3405.186035989, 3405.186035989, -0.005)
+        1       powerbal1(t3)
+       -1       TW
+        1       Wind_bal(t3)
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- PV_Ct  Solar spillage variable
+
+PV_Ct(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   PVCtC
+        1       PV_bal(t1)
+
+PV_Ct(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   PVCtC
+        1       PV_bal(t2)
+
+PV_Ct(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   PVCtC
+        1       PV_bal(t3)
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- Wind_Ct  Wind spillage variable
+
+Wind_Ct(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   WindCtC
+        1       Wind_bal(t1)
+
+Wind_Ct(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   WindCtC
+        1       Wind_bal(t2)
+
+Wind_Ct(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.005   WindCtC
+        1       Wind_bal(t3)
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- PX_G  PX USED quantity
+
+PX_G(RTC_1,t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.00032)
+       -0.0003  PXC
+        1       PXlim(RTC_1,t1)
+
+PX_G(RTC_1,t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.00032)
+       -0.0003  PXC
+        1       PXlim(RTC_1,t2)
+
+PX_G(RTC_1,t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.00032)
+       -0.0003  PXC
+        1       PXlim(RTC_1,t3)
+
+REMAINING 1437 ENTRIES SKIPPED
+
+---- PX_Uc  PX Uncontracted quantity
+
+PX_Uc(RTC_1,t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       PXlim(RTC_1,t1)
+
+PX_Uc(RTC_1,t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       PXlim(RTC_1,t2)
+
+PX_Uc(RTC_1,t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       PXlim(RTC_1,t3)
+
+REMAINING 1437 ENTRIES SKIPPED
+
+---- DSM  
+
+DSM(t1)
+                (.LO, .L, .UP, .M = 0, 0, 1191.74192106788, 0.000142)
+       -0.0001  DSMC
+        1       powerbal1(t1)
+       (0)      Eq1_Risk
+       (0)      Eq4_Risk
+
+DSM(t2)
+                (.LO, .L, .UP, .M = 0, 0, 1193.9418361959, 0.000142)
+       -0.0001  DSMC
+        1       powerbal1(t2)
+       (0)      Eq1_Risk
+       (0)      Eq4_Risk
+
+DSM(t3)
+                (.LO, .L, .UP, .M = 0, 0, 1152.69127586378, 0.000178)
+       -0.0002  DSMC
+        1       powerbal1(t3)
+       (0)      Eq1_Risk
+       (0)      Eq4_Risk
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- S_REC  
+
+S_REC(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+       -0.0002  S_RECC
+       -1       TSREC
+
+S_REC(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+       -0.0002  S_RECC
+       -1       TSREC
+
+S_REC(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+       -0.0002  S_RECC
+       -1       TSREC
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- NS_REC  
+
+NS_REC(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000133333333333333)
+       -0.0001  NS_RECC
+       -1       TNSREC
+
+NS_REC(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000133333333333333)
+       -0.0001  NS_RECC
+       -1       TNSREC
+
+NS_REC(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000133333333333333)
+       -0.0001  NS_RECC
+       -1       TNSREC
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- DAM  
+
+DAM(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000377407225806451)
+       -0.0004  DAMC
+        1       powerbal1(t1)
+       (0)      Eq2_Risk
+       (0)      Eq4_Risk
+
+DAM(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000367689064516129)
+       -0.0004  DAMC
+        1       powerbal1(t2)
+       (0)      Eq2_Risk
+       (0)      Eq4_Risk
+
+DAM(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000360266580645161)
+       -0.0004  DAMC
+        1       powerbal1(t3)
+       (0)      Eq2_Risk
+       (0)      Eq4_Risk
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- RTM  
+
+RTM(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000306879193548387)
+       -0.0003  RTMC
+        1       powerbal1(t1)
+       (0)      Eq3_Risk
+       (0)      Eq4_Risk
+
+RTM(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000306254451612903)
+       -0.0003  RTMC
+        1       powerbal1(t2)
+       (0)      Eq3_Risk
+       (0)      Eq4_Risk
+
+RTM(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0.000301451580645161)
+       -0.0003  RTMC
+        1       powerbal1(t3)
+       (0)      Eq3_Risk
+       (0)      Eq4_Risk
+
+REMAINING 93 ENTRIES SKIPPED
+
+---- Total_solar  
+
+Total_solar
+                (.LO, .L, .UP, .M = 0, 62153.5837454832, +INF, 0)
+        1       S_RPO_bal
+        1       TS
+
+
+---- Total_demand  
+
+Total_demand
+                (.LO, .L, .UP, .M = 0, 1101917.74578886, +INF, 0)
+       -0.105   S_RPO_bal
+       -0.105   NS_RPO_bal
+        1       TD
+
+
+---- Total_wind  
+
+Total_wind
+                (.LO, .L, .UP, .M = 0, 406785.019665169, +INF, 0)
+        1       NS_RPO_bal
+        1       TW
+
+
+---- Total_S_REC  
+
+Total_S_REC
+                (.LO, .L, .UP, .M = 0, 53547.779562347, +INF, 0)
+        1       S_RPO_bal
+        1       TSREC
+
+
+---- Total_NS_REC  
+
+Total_NS_REC
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       NS_RPO_bal
+        1       TNSREC
+
+
+---- u  Generator commitment status for time t
+
+u(APNRL,t1)
+                (.LO, .L, .UP, .M = 0, 1, 1, 0.01078)
+       55       powerlim1(APNRL,t1)
+     -100       powerlim2(APNRL,t1)
+       -1.3333  G_Rampdown(APNRL,t2)
+       -1       G_minuptime(APNRL,t2,t1)
+       -1       G_minuptime(APNRL,t3,t1)
+        1       G_minuptime(APNRL,t3,t2)
+       -1       G_minuptime(APNRL,t4,t1)
+        1       G_minuptime(APNRL,t4,t2)
+       -1       G_minuptime(APNRL,t5,t1)
+        1       G_minuptime(APNRL,t5,t2)
+       -1       G_minuptime(APNRL,t6,t1)
+        1       G_minuptime(APNRL,t6,t2)
+       -1       G_minuptime(APNRL,t7,t1)
+        1       G_minuptime(APNRL,t7,t2)
+       -1       G_minuptime(APNRL,t8,t1)
+        1       G_minuptime(APNRL,t8,t2)
+       -1       G_minuptime(APNRL,t9,t1)
+        1       G_minuptime(APNRL,t9,t2)
+       -1       G_minuptime(APNRL,t10,t1)
+        1       G_minuptime(APNRL,t10,t2)
+       -1       G_minuptime(APNRL,t11,t1)
+        1       G_minuptime(APNRL,t11,t2)
+       -1       G_minuptime(APNRL,t12,t1)
+        1       G_minuptime(APNRL,t12,t2)
+        1       G_minuptime(APNRL,t13,t2)
+        1       G_mindowntime(APNRL,t2,t1)
+        1       G_mindowntime(APNRL,t3,t1)
+       -1       G_mindowntime(APNRL,t3,t2)
+        1       G_mindowntime(APNRL,t4,t1)
+       -1       G_mindowntime(APNRL,t4,t2)
+        1       G_mindowntime(APNRL,t5,t1)
+       -1       G_mindowntime(APNRL,t5,t2)
+        1       G_mindowntime(APNRL,t6,t1)
+       -1       G_mindowntime(APNRL,t6,t2)
+        1       G_mindowntime(APNRL,t7,t1)
+       -1       G_mindowntime(APNRL,t7,t2)
+        1       G_mindowntime(APNRL,t8,t1)
+       -1       G_mindowntime(APNRL,t8,t2)
+        1       G_mindowntime(APNRL,t9,t1)
+       -1       G_mindowntime(APNRL,t9,t2)
+        1       G_mindowntime(APNRL,t10,t1)
+       -1       G_mindowntime(APNRL,t10,t2)
+        1       G_mindowntime(APNRL,t11,t1)
+       -1       G_mindowntime(APNRL,t11,t2)
+        1       G_mindowntime(APNRL,t12,t1)
+       -1       G_mindowntime(APNRL,t12,t2)
+       -1       G_mindowntime(APNRL,t13,t2)
+
+u(APNRL,t2)
+                (.LO, .L, .UP, .M = 0, 1, 1, 0.01078)
+       55       powerlim1(APNRL,t2)
+     -100       powerlim2(APNRL,t2)
+       -1.3333  G_Rampup(APNRL,t2)
+       -1.3333  G_Rampdown(APNRL,t3)
+        1       G_minuptime(APNRL,t2,t1)
+       -1       G_minuptime(APNRL,t3,t2)
+       -1       G_minuptime(APNRL,t4,t2)
+        1       G_minuptime(APNRL,t4,t3)
+       -1       G_minuptime(APNRL,t5,t2)
+        1       G_minuptime(APNRL,t5,t3)
+       -1       G_minuptime(APNRL,t6,t2)
+        1       G_minuptime(APNRL,t6,t3)
+       -1       G_minuptime(APNRL,t7,t2)
+        1       G_minuptime(APNRL,t7,t3)
+       -1       G_minuptime(APNRL,t8,t2)
+        1       G_minuptime(APNRL,t8,t3)
+       -1       G_minuptime(APNRL,t9,t2)
+        1       G_minuptime(APNRL,t9,t3)
+       -1       G_minuptime(APNRL,t10,t2)
+        1       G_minuptime(APNRL,t10,t3)
+       -1       G_minuptime(APNRL,t11,t2)
+        1       G_minuptime(APNRL,t11,t3)
+       -1       G_minuptime(APNRL,t12,t2)
+        1       G_minuptime(APNRL,t12,t3)
+       -1       G_minuptime(APNRL,t13,t2)
+        1       G_minuptime(APNRL,t13,t3)
+        1       G_minuptime(APNRL,t14,t3)
+       -1       G_mindowntime(APNRL,t2,t1)
+        1       G_mindowntime(APNRL,t3,t2)
+        1       G_mindowntime(APNRL,t4,t2)
+       -1       G_mindowntime(APNRL,t4,t3)
+        1       G_mindowntime(APNRL,t5,t2)
+       -1       G_mindowntime(APNRL,t5,t3)
+        1       G_mindowntime(APNRL,t6,t2)
+       -1       G_mindowntime(APNRL,t6,t3)
+        1       G_mindowntime(APNRL,t7,t2)
+       -1       G_mindowntime(APNRL,t7,t3)
+        1       G_mindowntime(APNRL,t8,t2)
+       -1       G_mindowntime(APNRL,t8,t3)
+        1       G_mindowntime(APNRL,t9,t2)
+       -1       G_mindowntime(APNRL,t9,t3)
+        1       G_mindowntime(APNRL,t10,t2)
+       -1       G_mindowntime(APNRL,t10,t3)
+        1       G_mindowntime(APNRL,t11,t2)
+       -1       G_mindowntime(APNRL,t11,t3)
+        1       G_mindowntime(APNRL,t12,t2)
+       -1       G_mindowntime(APNRL,t12,t3)
+        1       G_mindowntime(APNRL,t13,t2)
+       -1       G_mindowntime(APNRL,t13,t3)
+       -1       G_mindowntime(APNRL,t14,t3)
+
+u(APNRL,t3)
+                (.LO, .L, .UP, .M = 0, 1, 1, 0.01078)
+       55       powerlim1(APNRL,t3)
+     -100       powerlim2(APNRL,t3)
+       -1.3333  G_Rampup(APNRL,t3)
+       -1.3333  G_Rampdown(APNRL,t4)
+        1       G_minuptime(APNRL,t3,t1)
+        1       G_minuptime(APNRL,t3,t2)
+       -1       G_minuptime(APNRL,t4,t3)
+       -1       G_minuptime(APNRL,t5,t3)
+        1       G_minuptime(APNRL,t5,t4)
+       -1       G_minuptime(APNRL,t6,t3)
+        1       G_minuptime(APNRL,t6,t4)
+       -1       G_minuptime(APNRL,t7,t3)
+        1       G_minuptime(APNRL,t7,t4)
+       -1       G_minuptime(APNRL,t8,t3)
+        1       G_minuptime(APNRL,t8,t4)
+       -1       G_minuptime(APNRL,t9,t3)
+        1       G_minuptime(APNRL,t9,t4)
+       -1       G_minuptime(APNRL,t10,t3)
+        1       G_minuptime(APNRL,t10,t4)
+       -1       G_minuptime(APNRL,t11,t3)
+        1       G_minuptime(APNRL,t11,t4)
+       -1       G_minuptime(APNRL,t12,t3)
+        1       G_minuptime(APNRL,t12,t4)
+       -1       G_minuptime(APNRL,t13,t3)
+        1       G_minuptime(APNRL,t13,t4)
+       -1       G_minuptime(APNRL,t14,t3)
+        1       G_minuptime(APNRL,t14,t4)
+        1       G_minuptime(APNRL,t15,t4)
+       -1       G_mindowntime(APNRL,t3,t1)
+       -1       G_mindowntime(APNRL,t3,t2)
+        1       G_mindowntime(APNRL,t4,t3)
+        1       G_mindowntime(APNRL,t5,t3)
+       -1       G_mindowntime(APNRL,t5,t4)
+        1       G_mindowntime(APNRL,t6,t3)
+       -1       G_mindowntime(APNRL,t6,t4)
+        1       G_mindowntime(APNRL,t7,t3)
+       -1       G_mindowntime(APNRL,t7,t4)
+        1       G_mindowntime(APNRL,t8,t3)
+       -1       G_mindowntime(APNRL,t8,t4)
+        1       G_mindowntime(APNRL,t9,t3)
+       -1       G_mindowntime(APNRL,t9,t4)
+        1       G_mindowntime(APNRL,t10,t3)
+       -1       G_mindowntime(APNRL,t10,t4)
+        1       G_mindowntime(APNRL,t11,t3)
+       -1       G_mindowntime(APNRL,t11,t4)
+        1       G_mindowntime(APNRL,t12,t3)
+       -1       G_mindowntime(APNRL,t12,t4)
+        1       G_mindowntime(APNRL,t13,t3)
+       -1       G_mindowntime(APNRL,t13,t4)
+        1       G_mindowntime(APNRL,t14,t3)
+       -1       G_mindowntime(APNRL,t14,t4)
+       -1       G_mindowntime(APNRL,t15,t4)
+
+REMAINING 3357 ENTRIES SKIPPED
+
+---- p  PX contract status for Candidate Contract
+
+p(RTC_1,t1)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+     -500       PXlim(RTC_1,t1)
+
+p(RTC_1,t2)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+     -500       PXlim(RTC_1,t2)
+
+p(RTC_1,t3)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+     -500       PXlim(RTC_1,t3)
+
+REMAINING 509 ENTRIES SKIPPED
+
+---- uh  Hydro Generator commitment status for time t
+
+uh(KADAMPARAI_1,t1)
+                (.LO, .L, .UP, .M = 0, 1, 1, EPS)
+     -100       hydpowerlim1(KADAMPARAI_1,t1)
+     -100       hydpowerlim2(KADAMPARAI_1,t1)
+       -6       Gh_Rampdown(KADAMPARAI_1,t2)
+
+uh(KADAMPARAI_1,t2)
+                (.LO, .L, .UP, .M = 0, 1, 1, EPS)
+     -100       hydpowerlim1(KADAMPARAI_1,t2)
+     -100       hydpowerlim2(KADAMPARAI_1,t2)
+       -6       Gh_Rampup(KADAMPARAI_1,t2)
+       -6       Gh_Rampdown(KADAMPARAI_1,t3)
+
+uh(KADAMPARAI_1,t3)
+                (.LO, .L, .UP, .M = 0, 1, 1, EPS)
+     -100       hydpowerlim1(KADAMPARAI_1,t3)
+     -100       hydpowerlim2(KADAMPARAI_1,t3)
+       -6       Gh_Rampup(KADAMPARAI_1,t3)
+       -6       Gh_Rampdown(KADAMPARAI_1,t4)
+
+REMAINING 381 ENTRIES SKIPPED
+
+---- Total_cost  
+
+Total_cost
+                (.LO, .L, .UP, .M = -INF, 216.284127427389, +INF, 0)
+        1       OF
+       -1       Final_OF
+     -365       TPPC1
+
+
+---- Gh  Hydro Generator output under time period t
+
+Gh(KADAMPARAI_1,t1)
+                (.LO, .L, .UP, .M = -100, 100, 100, 0)
+        1       powerbal1(t1)
+       -1       hydpowerlim1(KADAMPARAI_1,t1)
+        1       hydpowerlim2(KADAMPARAI_1,t1)
+       -1       Gh_Rampup(KADAMPARAI_1,t2)
+        1       Gh_Rampdown(KADAMPARAI_1,t2)
+
+Gh(KADAMPARAI_1,t2)
+                (.LO, .L, .UP, .M = -100, 100, 100, 0)
+        1       powerbal1(t2)
+       -1       hydpowerlim1(KADAMPARAI_1,t2)
+        1       hydpowerlim2(KADAMPARAI_1,t2)
+        1       Gh_Rampup(KADAMPARAI_1,t2)
+       -1       Gh_Rampup(KADAMPARAI_1,t3)
+       -1       Gh_Rampdown(KADAMPARAI_1,t2)
+        1       Gh_Rampdown(KADAMPARAI_1,t3)
+
+Gh(KADAMPARAI_1,t3)
+                (.LO, .L, .UP, .M = -100, 100, 100, 0)
+        1       powerbal1(t3)
+       -1       hydpowerlim1(KADAMPARAI_1,t3)
+        1       hydpowerlim2(KADAMPARAI_1,t3)
+        1       Gh_Rampup(KADAMPARAI_1,t3)
+       -1       Gh_Rampup(KADAMPARAI_1,t4)
+       -1       Gh_Rampdown(KADAMPARAI_1,t3)
+        1       Gh_Rampdown(KADAMPARAI_1,t4)
+
+REMAINING 381 ENTRIES SKIPPED
+
+---- Risk  
+
+Risk
+                (.LO, .L, .UP, .M = -INF, 2040453.68472919, +INF, 0)
+  -4.400000E-7  Final_OF
+        1       Eq_Risk
+
+
+---- Risk1  
+
+Risk1
+                (.LO, .L, .UP, .M = -INF, 12.8014208434075, +INF, 0)
+       -1       Eq_Risk
+        1       Eq1_Risk
+
+
+---- Risk2  
+
+Risk2
+                (.LO, .L, .UP, .M = -INF, 195030.020558348, +INF, 0)
+       -1       Eq_Risk
+        1       Eq2_Risk
+
+
+---- Risk3  
+
+Risk3
+                (.LO, .L, .UP, .M = -INF, 1502357.23017391, +INF, 0)
+       -1       Eq_Risk
+        1       Eq3_Risk
+
+
+---- Risk4  
+
+Risk4
+                (.LO, .L, .UP, .M = -INF, 343053.632576086, +INF, 0)
+       -1       Eq_Risk
+        1       Eq4_Risk
+
+
+---- Final_cost  
+
+Final_cost
+                (.LO, .L, .UP, .M = -INF, 216.528981869556, +INF, 0)
+        1       Final_OF
+     -365       TPPC2
+
+
+---- Total_PPC1  
+
+Total_PPC1
+                (.LO, .L, .UP, .M = -INF, 90928.4165109969, +INF, 0)
+        1       TPPC1
+
+
+---- Total_PPC2  
+
+Total_PPC2
+                (.LO, .L, .UP, .M = -INF, 91017.7883823881, +INF, 0)
+        1       TPPC2
+
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 02/22/24 18:29:37 Page 62

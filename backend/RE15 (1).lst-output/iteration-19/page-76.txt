@@ -1,0 +1,41 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    388 PARAMETER report  
+
+    Final_cost       alpha
+
+1       11.245 1.000000E-9
+2       11.245 1.000000E-9
+3       11.245 1.000000E-9
+4       11.245 1.000000E-9
+5       11.245 1.000000E-9
+6       11.245 1.000000E-9
+7       11.245 1.000000E-9
+8       11.245 1.000000E-9
+9       11.245 1.000000E-9
+10      11.245 1.000000E-9
+11      11.245 1.000000E-9
+12      11.245 1.000000E-9
+13      11.245 1.000000E-9
+14      11.245 1.000000E-9
+15      11.245 1.000000E-9
+16      11.245 1.000000E-9
+17      11.245 1.000000E-9
+18      11.245 8.000000E-7
+
+
+
+EXECUTION TIME       =        0.141 SECONDS     12 MB  24.2.3 r46072 WEX-WEI
+
+
+USER: Parul Mathuria                                 G130702/0001AP-WIN
+      Malaviya National Institute of Technology, Electrical EngiDC10418
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\RE15.gms
+Output     C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\RE15.lst

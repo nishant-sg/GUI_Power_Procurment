@@ -1,0 +1,414 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  *POWER PROCUREMENT FOR THE STATE OF TAMIL NADU YEAR 2021
+   2  *THERMAL
+   3  *HYDRO
+   4  *SOLAR
+   5  *WIND
+   6  *POWER EXCHANGES
+   7  *DSM
+   8  *SOLAR_REC
+   9  *NON_SOLAR_REC
+  10  *SCHEDULING AT 15 MINUTES INTERVAL
+  11  set
+  12  Gen Thermal (Coal) Generators
+  13  /
+  14  APNRL
+  15  VALUTHUR_GTPS
+  16  TALCHER_1
+  17  TALCHER_2
+  18  KUTTALAM_GTPS
+  19  JINDAL
+  20  GMR
+  21  DB
+  22  RAMAGUNDAM_3
+  23  NLC_TPS1
+  24  KSK_MAHANADHI
+  25  RAMAGUNDAM_1_2
+  26  MAPS_KALPAKKAM
+  27  NLC_TPS2_1
+  28  NLC_TPS2_2
+  29  NLC_TPS2_EXPANSION
+  30  DHARIWAL
+  31  SIMHADRI
+  32  ILFS
+  33  NCTPS_1
+  34  NCTPS_2
+  35  BALCO
+  36  VALLUR
+  37  NTPL
+  38  CPP_BIO_COGEN
+  39  KOVILKALAPPAL_GTPS
+  40  KAIGA_1_2
+  41  KAIGA_3_4
+  42  TTPS
+  43  TAQA
+  44  MTPS_3
+  45  MTPS_1_2
+  46  KKNPP_1
+  47  KKNPP_2
+  48  COASTAL_ENERGEN
+  49  /
+  50  MR(Gen) Must Run Thermal (Coal) Generators
+  51  /
+  52  MAPS_KALPAKKAM
+  53  NLC_TPS2_2
+  54  NCTPS_2
+  55  NTPL
+  56  KAIGA_1_2
+  57  KAIGA_3_4
+  58  TTPS
+  59  MTPS_3
+  60  KKNPP_1
+  61  KKNPP_2
+  62  /
+  63  H_Gen Hydro Generators
+  64  /
+  65  KADAMPARAI_1
+  66  KADAMPARAI_2
+  67  KADAMPARAI_3
+  68  KADAMPARAI_4
+  69  /
+  70  t /t1*t96/
+  71  PV/Solar_Gen/
+  72  W/Wind_Gen/
+  73  PX_no Term Ahead Contracts in Power Exchange
+  74  /
+  75  RTC_1 ,
+  76  RTC_2 ,
+  77  RTC_3  ,
+  78  mShldr_1  ,
+  79  mShldr_2  ,
+  80  mpeak_1 ,
+  81  mpeak_2 ,
+  82  mpeak_3 ,
+  83  Shldr_1  ,
+  84  Shldr_2  ,
+  85  epeak_1  ,
+  86  epeak_2  ,
+  87  epeak_3   ,
+  88  off_peak_1,
+  89  off_peak_2
+  90  /
+  91  counter /1*18/
+  92  ;
+  94   
+  95  Parameter Gen_Data(Gen,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  Gen_Data = 1:Gen_Data
+  99   
+ 100  display Gen_Data ;
+ 101  Parameter demand1(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  demand1 = 1:demand1
+ 105  display demand1;
+ 106  Parameter PV_Act(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  PV_Act = 1:PV_Act
+ 110  display PV_Act;
+ 111  Parameter Wind_Act(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  Wind_Act = 1:Wind_Act
+ 115  display Wind_Act;
+ 116  Parameter Hydro_Data(H_Gen,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  Hydro_Data = 1:Hydro_Data
+ 120  display Hydro_Data;
+ 121  Parameter Hydro_flow(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  Hydro_flow = 1:Hydro_flow
+ 125  display Hydro_flow;
+ 126  Parameter PX_Data(PX_no,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  PX_Data = 1:PX_Data
+ 130  display PX_Data ;
+ 131  Parameter PX_Cost(PX_no,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  PX_Cost = 1:PX_Cost
+ 135  display PX_Cost;
+ 136  parameter PX_Avail(PX_no,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  PX_Avail = 1:PX_Avail
+ 140  display PX_Avail;
+ 141  parameter DSM_cost(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  DSM_cost = 1:DSM_cost
+ 145  display DSM_cost;
+ 146  parameter REC_Data(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  REC_Data = 1:REC_Data
+ 150  display REC_Data;
+ 151  parameter DAM_Data(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  DAM_Data = 1:DAM_Data
+ 155  display DAM_Data;
+ 156  parameter RTM_Data(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  RTM_Data = 1:RTM_Data
+ 160  display RTM_Data;
+ 161  parameter Risk_Data(t,*);
+GDXIN   C:\Users\Shristi\OneDrive\Documents\gamsdir\projdir\TN_prelim_data11.gdx
+--- LOAD  Risk_Data = 1:Risk_Data
+ 165  display Risk_Data;
+ 166  parameter alpha;
+ 167  *parameter value(counter1);
+ 168   
+ 170   
+ 171  Alias (t,tt);
+ 172   
+ 173  Positive Variable
+ 174  Gen_cost
+ 175  LS_cost
+ 176  PXX_cost
+ 177  DSM_costt
+ 178  HGen_cost
+ 179  S_REC_cost
+ 180  NS_REC_cost
+ 181  PXXDAM_cost
+ 182  PXXRTM_cost
+ 183  PV_Ct_cost
+ 184  Wind_Ct_cost
+ 185  *PXXG_DAM_cost
+ 186  G(Gen,t) Generator output under time period t
+ 187  E(t) Energy not served in period t (Load Shedding)
+ 188  PV_Sch(t) Scheduled PV Generation
+ 189  Wind_Sch(t) Scheduled Wind Generation
+ 190  PV_Ct(t) Solar spillage variable
+ 191  Wind_Ct(t) Wind spillage variable
+ 192  Vh(H_Gen,t)  Head of water
+ 193  Rh(H_Gen,t)  Water released
+ 194  *Gh(H_Gen,t) Hydro Generator output under time period t
+ 195  PX_G(PX_no,t) PX USED quantity
+ 196  PX_Uc(PX_no,t) PX Uncontracted quantity
+ 197  DSM(t)
+ 198  S_REC(t)
+ 199  NS_REC(t)
+ 200  DAM(t)
+ 201  RTM(t)
+ 202  *G_DAM(t)
+ 203  Total_solar
+ 204  Total_demand
+ 205  Total_wind
+ 206  *Total_G_DAM
+ 207  Total_S_REC
+ 208  Total_NS_REC
+ 209  ;
+ 210   
+ 211  Binary Variable
+ 212  u(Gen,t) Generator commitment status for time t
+ 213  p(PX_no,t)  PX contract status for Candidate Contract
+ 214  uh(H_Gen,t) Hydro Generator commitment status for time t
+ 215  ;
+ 216   
+ 217  Free variable
+ 218  Total_cost
+ 219  Gh(H_Gen,t) Hydro Generator output under time period t
+ 220  Risk
+ 221  Risk1
+ 222  Risk2
+ 223  Risk3
+ 224  Risk4
+ 225  Final_cost
+ 226  Total_PPC1
+ 227  Total_PPC2
+ 228  ;
+ 229   
+ 230  scalar
+ 231  Cp /50000/
+ 232  PV_CTcost /50000/
+ 233  Wind_CTcost /50000/
+ 234  S_RPO /0.105/
+ 235  NS_RPO /0.105/
+ 236  *H_RPO /0.0018/
+ 237  Conv_FC /11473.11/
+ 238  Hyd_FC /511.6/
+ 239  ;
+ 240   
+ 241  PV_Sch.lo(t) = 0;
+ 242  PV_Sch.up(t) = PV_Act(t,'Sm');
+ 243  Wind_Sch.lo(t) = 0;
+ 244  Wind_Sch.up(t) = Wind_Act(t,'Wm');
+ 245  DSM.up(t) = [0.12*demand1(t,'1')];
+ 246  DSM.lo(t) = 0;
+ 247  *G_DAM.lo(t)=0;
+ 248  *G_DAM.up(t)=500;
+ 249  Vh.fx(H_Gen,'t24') = Hydro_Data(H_Gen,'Vfin') ;
+ 250  Gh.lo(H_Gen,t)=[-1*Hydro_Data(H_Gen,'Phmax')];
+ 251  Gh.up(H_Gen,t)=Hydro_Data(H_Gen,'Phmax');
+ 252   
+ 253  equations
+ 254  OF
+ 255  Final_OF
+ 256  GC
+ 257  LSC
+ 258  PXC
+ 259  DSMC
+ 260  HGC
+ 261  S_RECC
+ 262  NS_RECC
+ 263  DAMC
+ 264  RTMC
+ 265  PVCtC
+ 266  WindCtC
+ 267  *G_DAMC
+ 268  powerbal1(t)
+ 269  S_RPO_bal
+ 270  NS_RPO_bal
+ 271  *hydGen(H_Gen,t)
+ 272  powerlim1(Gen,t)
+ 273  powerlim2(Gen,t)
+ 274  hydpowerlim1(H_Gen,t)
+ 275  hydpowerlim2(H_Gen,t)
+ 276  G_Rampup(Gen,t) Generator Ramp up constraints
+ 277  G_Rampdown(Gen,t) Generator Ramp down constraints
+ 278  Gh_Rampup(H_Gen,t) Hydro Generator Ramp up constraints
+ 279  Gh_Rampdown(H_Gen,t) Hydro Generator Ramp down constraints
+ 280  *hydreleaselim1(H_Gen,t)
+ 281  *hydreleaselim2(H_Gen,t)
+ 282  *hydheadlim1(H_Gen,t)
+ 283  *hydheadlim2(H_Gen,t)
+ 284  G_minuptime(Gen,t,tt) Generator min uptime constraint
+ 285  G_mindowntime(Gen,t,tt) Generator min downtime constraint
+ 286  PXlim(PX_no,t)
+ 287  MUST_RUN
+ 288  MUST_RUN_lim
+ 289  Eq_Risk
+ 290  Eq1_Risk
+ 291  Eq2_Risk
+ 292  Eq3_Risk
+ 293  Eq4_Risk
+ 294  TS
+ 295  TD
+ 296  TW
+ 297  *TGD
+ 298  TSREC
+ 299  TNSREC
+ 300  PV_bal(t)
+ 301  Wind_bal(t)
+ 302  TPPC1
+ 303  TPPC2
+ 304  ;
+ 305   
+ 306  OF.. Total_Cost =e=  Gen_cost + LS_cost + DSM_costt + PXX_cost + HGen_cost
+       + S_REC_cost + NS_REC_cost + PXXDAM_cost + PXXRTM_cost + PV_Ct_cost + Win
+      d_Ct_cost;
+ 307  GC.. Gen_cost =e= (10**(-7))*[sum((t,Gen),Gen_Data(Gen,'VC')*G(Gen,t))];
+ 308  LSC.. LS_cost =e= (10**(-7))*[sum(t,(E(t)*Cp))];
+ 309  PXC..  PXX_cost =e= (10**(-7))*[sum((t,PX_no),PX_Cost(PX_no,'1')*PX_G(PX_n
+      o,t))];
+ 310  DSMC.. DSM_costt =e= (10**(-7))*[sum(t,(DSM(t)*DSM_cost(t,'1')))];
+ 311  HGC.. HGen_cost =e= (10**(-7))*[sum((t,H_Gen),Hydro_Data(H_Gen,'hydGcost')
+      *Gh(H_Gen,t))];
+ 312  S_RECC.. S_REC_cost =e= (10**(-7))*[sum(t,(S_REC(t)*REC_Data(t,'1')))];
+ 313  NS_RECC.. NS_REC_cost =e= (10**(-7))*[sum(t,(NS_REC(t)*REC_Data(t,'2')))];
+ 314  DAMC.. PXXDAM_cost =e= (10**(-7))*[sum(t,(DAM(t)*DAM_Data(t,'1')))];
+ 315  RTMC.. PXXRTM_cost =e= (10**(-7))*[sum(t,(RTM(t)*RTM_Data(t,'1')))];
+ 316  PVCtC.. PV_Ct_cost =e= (10**(-7))*[sum(t,(PV_Ct(t)*PV_CTcost))];
+ 317  WindCtC.. Wind_Ct_cost =e= (10**(-7))*[sum(t,(Wind_Ct(t)*Wind_CTcost))];
+ 318  *G_DAMC.. PXXG_DAM_cost =e= (10**(-7))*[sum(t,(G_DAM(t)*DAM_Data(t,'2')))]
+      ;
+ 319  powerbal1(t).. sum(Gen,G(Gen,t))+ E(t) + DSM(t) + DAM(t) + RTM(t) + sum(H_
+      Gen,Gh(H_Gen,t)) + PV_sch(t) + Wind_sch(t) =g= demand1(t,'1');
+ 320  TS.. Total_solar =e= sum(t,PV_sch(t));
+ 321  TD.. Total_demand =e= sum(t,demand1(t,'1'));
+ 322  TW.. Total_wind =e= sum(t,Wind_sch(t));
+ 323  *TGD.. Total_G_DAM =e= sum(t,G_DAM(t));
+ 324  TSREC.. Total_S_REC =e= sum(t,S_REC(t));
+ 325  TNSREC.. Total_NS_REC =e= sum(t,NS_REC(t));
+ 326  S_RPO_bal..  Total_solar + Total_S_REC =g= S_RPO*Total_demand;
+ 327  NS_RPO_bal.. Total_wind + Total_NS_REC =g= NS_RPO*Total_demand;
+ 328  *hydGen(H_Gen,t).. Gh(H_Gen,t) =e= Hydro_Data(H_Gen,'c1')*Vh(H_Gen,t)*Vh(H
+      _Gen,t) + Hydro_Data(H_Gen,'c2')*Rh(H_Gen,t)*Rh(H_Gen,t) + Hydro_Data(H_Ge
+      n,'c3')*Vh(H_Gen,t)*Rh(H_Gen,t) + Hydro_Data(H_Gen,'c4')*Vh(H_Gen,t) + Hyd
+      ro_Data(H_Gen,'c5')*Rh(H_Gen,t) + Hydro_Data(H_Gen,'c6');
+ 329  powerlim1(Gen,t).. Gen_Data(Gen,'Pmin')*u(Gen,t)=l= G(Gen,t) ;
+ 330  powerlim2(Gen,t).. G(Gen,t)=l= Gen_Data(Gen,'Pmax')*u(Gen,t);
+ 331  hydpowerlim1(H_Gen,t).. Hydro_Data(H_Gen,'Phmin')*uh(H_Gen,t)=l= Gh(H_Gen,
+      t) ;
+ 332  hydpowerlim2(H_Gen,t).. Gh(H_Gen,t)=l= Hydro_Data(H_Gen,'Phmax')*uh(H_Gen,
+      t);
+ 333  *hydreleaselim1(H_Gen,t).. Hydro_Data(H_Gen,'Qmin')*uh(H_Gen,t)=l= Rh(H_Ge
+      n,t) ;
+ 334  *hydreleaselim2(H_Gen,t).. Rh(H_Gen,t)=l= Hydro_Data(H_Gen,'Qmax')*uh(H_Ge
+      n,t);
+ 335  *hydheadlim1(H_Gen,t).. Hydro_Data(H_Gen,'Vmin')*uh(H_Gen,t)=l= Vh(H_Gen,t
+      ) ;
+ 336  *hydheadlim2(H_Gen,t).. Vh(H_Gen,t)=l= Hydro_Data(H_Gen,'Vmax')*uh(H_Gen,t
+      );
+ 337  G_Rampup(Gen,t)$(ord(t)>1)..    G(Gen,t) - G(Gen,t-1) =l= Gen_Data(Gen,'R'
+      ) * u(Gen,t);
+ 338  G_Rampdown(Gen,t)$(ord(t)>1)..  G(Gen,t-1) - G(Gen,t) =l= Gen_Data(Gen,'R'
+      )*u(Gen,t-1);
+ 339  Gh_Rampup(H_Gen,t)$(ord(t)>1)..    Gh(H_Gen,t) - Gh(H_Gen,t-1) =l= Hydro_D
+      ata(H_Gen,'R') * uh(H_Gen,t);
+ 340  Gh_Rampdown(H_Gen,t)$(ord(t)>1)..  Gh(H_Gen,t-1) - Gh(H_Gen,t) =l= Hydro_D
+      ata(H_Gen,'R')*uh(H_Gen,t-1);
+ 341  G_minuptime(Gen,t,tt)$((ord(tt)> ord(t)- Gen_Data(Gen,'UT')) $(ord(tt) < o
+      rd(t)))..  u(Gen,t) =g= u(Gen,tt)-u(Gen,tt-1);
+ 342  G_mindowntime(Gen,t,tt)$((ord(tt)> ord(t)- Gen_Data(Gen,'DT'))$(ord(tt) < 
+      ord(t))).. 1-u(Gen,t) =g= u(Gen,tt-1)- u(Gen,tt);
+ 343  PXlim(PX_no,t).. PX_G(PX_no,t)+ PX_Uc(PX_no,t) =e= PX_Data(PX_no,'Pmaxx')*
+      PX_Avail(PX_no,t)*p(PX_no,t);
+ 344  MUST_RUN(MR,t)..  u(MR,t) =e= 1;
+ 345  MUST_RUN_lim(MR,t).. G(MR,t)=e= Gen_Data(MR,'Pmax');
+ 346  PV_bal(t).. PV_Ct(t) =e= PV_Act(t,'Sm') - PV_sch(t);
+ 347  Wind_bal(t).. Wind_Ct(t) =e= Wind_Act(t,'Wm') - Wind_sch(t);
+ 348  Eq1_Risk.. Risk1 =e= (10**(-7))*[sum(t,(DSM(t)*DSM(t)*Risk_Data(t,'3')))];
+ 349  Eq2_Risk.. Risk2 =e= (10**(-7))*[sum(t,(DAM(t)*DAM(t)*Risk_Data(t,'6')))];
+ 350  Eq3_Risk.. Risk3 =e= (10**(-7))*[sum(t,(RTM(t)*RTM(t)*Risk_Data(t,'9')))];
+ 351  Eq4_Risk.. Risk4 =e= (10**(-7))*(2*{[sum(t,(DSM(t)*DAM(t)*Risk_Data(t,'10'
+      )))] + [sum(t,(DAM(t)*RTM(t)*Risk_Data(t,'14')))] + [sum(t,(DSM(t)*RTM(t)*
+      Risk_Data(t,'12')))]});
+ 352  Eq_Risk..  Risk =e= Risk1 + Risk2 + Risk3 + Risk4;
+ 353  Final_OF.. Final_cost =e= Total_cost + [alpha*Risk];
+ 354  TPPC1.. Total_PPC1 =e= [365*Total_cost] + Conv_FC + Hyd_FC;
+ 355  TPPC2.. Total_PPC2 =e= [365*Final_cost] + Conv_FC + Hyd_FC;
+ 356   
+ 357  model RE15 /all/;
+ 358  *RE14.nodlim = 1000;
+ 359  *option optcr = 0.01;
+ 360  option MINLP=SBB;
+ 361   
+ 362  parameter report(counter,*);
+ 363  loop(counter,
+ 364  *alpha=(ord(counter))/((10**(6))*(card(counter)));
+ 365  alpha$(ord(counter)=1)=0.000000001;
+ 366  * alpha$(ord(counter)=2)=0.0000000025;
+ 367  * alpha$(ord(counter)=3)=0.0000000050;
+ 368  * alpha$(ord(counter)=4)=0.0000000075;
+ 369  * alpha$(ord(counter)=5)=0.0000000100;
+ 370  * alpha$(ord(counter)=6)=0.0000000150;
+ 371  * alpha$(ord(counter)=7)=0.0000000200;
+ 372  * alpha$(ord(counter)=8)=0.0000000250;
+ 373  * alpha$(ord(counter)=9)=0.0000000300;
+ 374  * alpha$(ord(counter)=10)=0.0000000350;
+ 375  * alpha$(ord(counter)=11)=0.0000000400;
+ 376  * alpha$(ord(counter)=12)=0.00000011;
+ 377  * alpha$(ord(counter)=13)=0.000000115;
+ 378  * alpha$(ord(counter)=14)=0.00000012;
+ 379  * alpha$(ord(counter)=15)=0.00000044;
+ 380  * alpha$(ord(counter)=16)=0.00000046;
+ 381  * alpha$(ord(counter)=17)=0.00000048;
+ 382  alpha$(ord(counter)=18)=0.00000080;
+ 383  solve RE15 using MINLP minimizing Final_cost;
+ 384  report(counter,'Final_cost')=Final_cost.l;
+ 385  report(counter,'alpha')=alpha;
+ 386  report(counter,'Risk')=Risk.l;
+ 387  );
+ 388  display report;
+ 389   
+ 390  execute_unload "RE15.gdx";
+ 391   
+ 392   
+ 393   
+ 394   
+ 395   
+ 396   
+ 397   
+ 398   
+ 399   
+ 400   
+ 401   
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 03/20/24 16:16:36 Page 2

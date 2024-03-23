@@ -1,0 +1,23 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE RE15 Using MINLP From line 383
+
+
+LOOPS                              counter   11
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          43     SINGLE EQUATIONS       83,241
+BLOCKS OF VARIABLES          42     SINGLE VARIABLES       11,865
+NON ZERO ELEMENTS       243,716     NON LINEAR N-Z            576
+DERIVATIVE POOL              10     CONSTANT POOL             593
+CODE LENGTH               1,747     DISCRETE VARIABLES      4,256
+
+
+GENERATION TIME      =        0.157 SECONDS     29 MB  24.2.3 r46072 WEX-WEI
+
+
+EXECUTION TIME       =        0.266 SECONDS     29 MB  24.2.3 r46072 WEX-WEI
+               L O O P S            counter 11
+
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 03/21/24 23:02:28 Page 47

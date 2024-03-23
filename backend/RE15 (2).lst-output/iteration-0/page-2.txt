@@ -1,0 +1,73 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\RE15.gms
+     2       96 CALL           1      96  GDXXRW TN_prelim_data11.xlsx Par=Gen_D
+                                          ata rng=Gdetails1!A1:H43 Rdim=1 Cdim=1
+     3       97 GDXIN          1      97  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+     4      102 CALL           1     102  GDXXRW TN_prelim_data11.xlsx  Par=dema
+                                          nd1 rng=Demand_Data!A1:B97 Rdim=1 Cdim
+                                          =1
+     5      103 GDXIN          1     103  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+     6      107 CALL           1     107  GDXXRW TN_prelim_data11.xlsx  Par=PV_A
+                                          ct rng=PV_Data!A1:B97 Rdim=1 Cdim=1
+     7      108 GDXIN          1     108  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+     8      112 CALL           1     112  GDXXRW TN_prelim_data11.xlsx  Par=Wind
+                                          _Act rng=Wind_Data!A1:B97 Rdim=1 Cdim=
+                                          1
+     9      113 GDXIN          1     113  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    10      117 CALL           1     117  GDXXRW TN_prelim_data11.xlsx  Par=Hydr
+                                          o_Data rng=Hydro_Data!A1:Q5 Rdim=1 Cdi
+                                          m=1
+    11      118 GDXIN          1     118  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    12      122 CALL           1     122  GDXXRW TN_prelim_data11.xlsx  Par=Hydr
+                                          o_flow rng=Hydro_flow!A1:E97 Rdim=1 Cd
+                                          im=1
+    13      123 GDXIN          1     123  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    14      127 CALL           1     127  GDXXRW TN_prelim_data11.xlsx  Par=PX_D
+                                          ata rng=PX_Data!A1:E16 Rdim=1 Cdim=1
+    15      128 GDXIN          1     128  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    16      132 CALL           1     132  GDXXRW TN_prelim_data11.xlsx  Par=PX_C
+                                          ost rng=PX_Cost!A1:B16  Rdim=1 Cdim=1
+    17      133 GDXIN          1     133  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    18      137 CALL           1     137  GDXXRW TN_prelim_data11.xlsx  Par=PX_A
+                                          vail rng=PX_CA!A1:CS16 Rdim=1 Cdim=1
+    19      138 GDXIN          1     138  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    20      142 CALL           1     142  GDXXRW TN_prelim_data11.xlsx  Par=DSM_
+                                          cost rng=DSM_Data!C1:D97 Rdim=1 Cdim=1
+    21      143 GDXIN          1     143  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    22      147 CALL           1     147  GDXXRW TN_prelim_data11.xlsx  Par=REC_
+                                          Data rng=REC_Data!A1:C97 Rdim=1 Cdim=1
+    23      148 GDXIN          1     148  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    24      152 CALL           1     152  GDXXRW TN_prelim_data11.xlsx  Par=DAM_
+                                          Data rng=DAM_Data!A1:B97 Rdim=1 Cdim=1
+    25      153 GDXIN          1     153  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    26      157 CALL           1     157  GDXXRW TN_prelim_data11.xlsx  Par=RTM_
+                                          Data rng=RTM_Data!A1:B97 Rdim=1 Cdim=1
+    27      158 GDXIN          1     158  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+    28      162 CALL           1     162  GDXXRW TN_prelim_data11.xlsx  Par=Risk
+                                          _Data rng=Risk_Data!A2:P98 Rdim=1 Cdim
+                                          =1
+    29      163 GDXIN          1     163  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\TN_prelim_data11.gdx
+
+
+COMPILATION TIME     =       41.531 SECONDS      3 MB  24.2.3 r46072 WEX-WEI
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 03/21/24 23:02:28 Page 3

@@ -1,0 +1,23 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Raj_02 Using MINLP From line 446
+
+
+LOOPS                              counter   3
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          36     SINGLE EQUATIONS      109,776
+BLOCKS OF VARIABLES          37     SINGLE VARIABLES       17,622
+NON ZERO ELEMENTS       320,842     NON LINEAR N-Z            570
+DERIVATIVE POOL              10     CONSTANT POOL             587
+CODE LENGTH               1,729     DISCRETE VARIABLES      7,136
+
+
+GENERATION TIME      =        0.360 SECONDS     37 MB  24.2.3 r46072 WEX-WEI
+
+
+EXECUTION TIME       =        0.516 SECONDS     37 MB  24.2.3 r46072 WEX-WEI
+               L O O P S            counter 3
+
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 02/29/24 14:06:26 Page 15

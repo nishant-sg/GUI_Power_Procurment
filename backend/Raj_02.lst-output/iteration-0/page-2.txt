@@ -1,0 +1,63 @@
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Raj_02.gms
+     2      160 CALL           1     160  GDXXRW Rajj_prelim_data.xlsx Par=Gen_D
+                                          ata rng=Gdetails1!A1:H70 Rdim=1 Cdim=1
+     3      161 GDXIN          1     161  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+     4      165 CALL           1     165  GDXXRW Rajj_prelim_data.xlsx  Par=dema
+                                          nd1 rng=Demand_Data!A1:B97 Rdim=1 Cdim
+                                          =1
+     5      166 GDXIN          1     166  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+     6      170 CALL           1     170  GDXXRW Rajj_prelim_data.xlsx  Par=PV_A
+                                          ct rng=PV_Data!A1:B97 Rdim=1 Cdim=1
+     7      171 GDXIN          1     171  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+     8      175 CALL           1     175  GDXXRW Rajj_prelim_data.xlsx  Par=Wind
+                                          _Act rng=Wind_Data!A1:B97 Rdim=1 Cdim=
+                                          1
+     9      176 GDXIN          1     176  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    10      190 CALL           1     190  GDXXRW Rajj_prelim_data.xlsx  Par=PX_D
+                                          ata rng=PX_Data!A1:E16 Rdim=1 Cdim=1
+    11      191 GDXIN          1     191  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    12      195 CALL           1     195  GDXXRW Rajj_prelim_data.xlsx  Par=PX_C
+                                          ost rng=PX_Cost!A1:B16  Rdim=1 Cdim=1
+    13      196 GDXIN          1     196  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    14      200 CALL           1     200  GDXXRW Rajj_prelim_data.xlsx  Par=PX_A
+                                          vail rng=PX_CA!A1:CS16 Rdim=1 Cdim=1
+    15      201 GDXIN          1     201  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    16      205 CALL           1     205  GDXXRW Rajj_prelim_data.xlsx  Par=DSM_
+                                          cost rng=DSM_Data!C1:D97 Rdim=1 Cdim=1
+    17      206 GDXIN          1     206  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    18      210 CALL           1     210  GDXXRW Rajj_prelim_data.xlsx  Par=REC_
+                                          Data rng=REC_Data!A1:C97 Rdim=1 Cdim=1
+    19      211 GDXIN          1     211  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    20      215 CALL           1     215  GDXXRW Rajj_prelim_data.xlsx  Par=DAM_
+                                          Data rng=DAM_Data!A1:B97 Rdim=1 Cdim=1
+    21      216 GDXIN          1     216  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    22      220 CALL           1     220  GDXXRW Rajj_prelim_data.xlsx  Par=RTM_
+                                          Data rng=RTM_Data!A1:B97 Rdim=1 Cdim=1
+    23      221 GDXIN          1     221  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+    24      225 CALL           1     225  GDXXRW Rajj_prelim_data.xlsx  Par=Risk
+                                          _Data rng=Risk_Data!A2:P97 Rdim=1 Cdim
+                                          =1
+    25      226 GDXIN          1     226  C:\Users\Shristi\OneDrive\Documents\ga
+                                          msdir\projdir\Rajj_prelim_data.gdx
+
+
+COMPILATION TIME     =       32.172 SECONDS      3 MB  24.2.3 r46072 WEX-WEI
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 02/29/24 14:06:26 Page 3

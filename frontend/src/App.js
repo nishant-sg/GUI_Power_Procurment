@@ -19,7 +19,19 @@ function App() {
     5000,5000,5000,5000,5000,5000,5000,5000,
     5000,5000,5000,5000,5000,5000,5000,5000,
     5000,5000,5000,5000,5000,5000,5000,5000,]);
-  const [states, setState] = useState([]);
+  const [outputTable, setOutputTable] = useState([5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,
+    5000,5000,5000,5000,5000,5000,5000,5000,]);
+  const [states, setState] = useState(["Tamil Nadu"]);
 
   useEffect(() => {
     fetchData();
@@ -140,18 +152,20 @@ function App() {
         "Content-type": "application/json; charset=UTF-8"
     }
 })
+
     .then(data => {
         // Do some stuff here
-        // data.text();
+        data.text();
         console.log(data);
     })
     .catch(err => {
         // Catch and display errors
     });
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const res = await response.text();
+      // if (!response.ok) {
+      //   throw new Error("Failed to fetch data");
+      // }
+      // const res = await response.text();
+      // console.log(response);
   }
 
   return (

@@ -23,6 +23,7 @@ def test():
 def getStates():
     f = open('states.json')
     data = json.load(f)
+    print(data)
     return data
 
 # @app.route('/updateIEXData')
@@ -37,16 +38,16 @@ def updateIEXData():
     sessionId = str(int(time.time()))
     workbook = xlsxwriter.Workbook(f"{sessionId}/input.xlsx")
     # os.makedirs(sessionId)
-    json = request.get_json()
+    json_req = request.get_json()
 
 
     # sessionId = "012312"
-    state = json['state']
-    demand = json['data']
-    wind = json['wind']
-    solar = json['solar']
-    thermal = json['thermal']
-    hydro = json['hydro']
+    state = json_req['state']
+    demand = json_req['data']
+    wind = json_req['wind']
+    solar = json_req['solar']
+    thermal = json_req['thermal']
+    hydro = json_req['hydro']
     os.makedirs(f'{sessionId}', exist_ok=True)
     path1 = 'StateData/CommonData.xlsx'
     path2 = f'{sessionId}/input.xlsx'
@@ -247,7 +248,8 @@ def updateIEXData():
     
     # subprocess.run1()
     print(jsonify({"r1":r1,"r2":r2,"sessionId":sessionId}))
-    return jsonify({"r1":r1,"r2":r2,"sessionId":sessionId})
+    json_object = json.dumps({"r1":r1,"r2":r2,"sessionId":sessionId}) 
+    return json_object
 
 
 
